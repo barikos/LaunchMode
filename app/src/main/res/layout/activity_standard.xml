@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".StandardActivity"
+    android:orientation="vertical"
+    android:background="@color/standard">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_standart"
+        style="@style/btn_style"
+        android:text="@string/standard"
+        android:textColor="@color/standard"
+        android:layout_above="@id/btn_singleTop"/>
+    <Button
+        android:id="@+id/btn_singleTop"
+        style="@style/btn_style"
+        android:text="@string/singleTop"
+        android:textColor="@color/singleTop"
+        android:layout_above="@id/btn_singleTask"/>
+    <Button
+        android:id="@+id/btn_singleTask"
+        style="@style/btn_style"
+        android:text="@string/singleTask"
+        android:textColor="@color/singleTask"
+        android:layout_above="@id/btn_singleInstance"/>
+    <Button
+        android:id="@+id/btn_singleInstance"
+        style="@style/btn_style"
+        android:text="@string/singleInstance"
+        android:textColor="@color/singleInstance"
+        android:layout_alignParentBottom="true"/>
+
+</LinearLayout>
