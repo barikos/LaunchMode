@@ -26,12 +26,11 @@ public class BaseApplication extends Application{
     }
 
     public void pushToStack(BaseActivity activity){
-        int currentTaskId = getCurrentTaskId();
+        int currentTaskId = activity.getTaskId();
         if (!mTasks.containsKey(currentTaskId)){
             mTasks.put(currentTaskId, new Stack<BaseActivity>());
         }
-        Stack<BaseActivity> stack = mTasks.get(currentTaskId);
-        stack.add(activity);
+        mTasks.get(currentTaskId).add(activity);
     }
 
     public void removeFromStack(BaseActivity activity){
@@ -41,7 +40,7 @@ public class BaseApplication extends Application{
         }
     }
 
-    public Stack<BaseActivity> getCurentTask(){
+    public Stack<BaseActivity> getCurrentTask(){
         return mTasks.get(getCurrentTaskId());
     }
 
@@ -51,7 +50,7 @@ public class BaseApplication extends Application{
         return runningTask.id;
     }
 
-    public void changeIntentFilteMode(){
+    public void changeIntentFilterMode(){
         mIntentFilterMode = !mIntentFilterMode;
     }
 
